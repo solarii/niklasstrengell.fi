@@ -1,0 +1,247 @@
+/* Basic */
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  max-width: 100vw; }
+
+/* Re-used elements */
+.slash {
+  font-size: 2em;
+  color: #DD4124;
+  font-weight: 900; }
+
+.black {
+  color: black; }
+
+.tangerine {
+  color: #DD4124; }
+
+/* Front Page */
+#left {
+  float: left;
+  width: 50%;
+  height: 100vh; }
+
+#right {
+  background-image: url("../img/oma_kuva.jpeg");
+  background-size: cover;
+  background-position: 50% 50%;
+  float: right;
+  width: 50%;
+  height: 100vh; }
+
+#intro {
+  padding: 25%; }
+  #intro h1 {
+    font-size: 2.5em; }
+  #intro p {
+    font-size: 1.25em; }
+  #intro a {
+    color: black;
+    padding-left: 2%; }
+    #intro a:hover {
+      color: red; }
+    #intro a:hover ~ .slash {
+      color: black; }
+
+/* Other pages */
+#left_navigation {
+  padding: 2.5%;
+  position: fixed;
+  float: left;
+  width: 20%;
+  height: 100vh; }
+  #left_navigation ul {
+    list-style: none; }
+  #left_navigation a {
+    color: black; }
+
+#right_content {
+  float: right;
+  width: 80%; }
+
+/* Masonry */
+/* ---- grid ---- */
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 32.5%; }
+
+.grid-item {
+  float: left;
+  margin-bottom: 10px; }
+
+.grid-item img {
+  display: block;
+  max-width: 100%; }
+
+.m-scene {
+  /** Basic styles for an animated element */
+  /** An element that fades in */
+  /** An element that fades in and slides up */
+  /** An element that fades in and slides down */
+  /** An element that fades in and slides from the right */
+  /** An element that fades in and slides from the left */
+  /** Reverse "exit" animations */ }
+  .m-scene .scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both; }
+  .m-scene .scene_element--fadein {
+    animation-name: fadeIn; }
+  .m-scene .scene_element--fadeinup {
+    animation-name: fadeInUp; }
+  .m-scene .scene_element--fadeindown {
+    animation-name: fadeInDown; }
+  .m-scene .scene_element--fadeinright {
+    animation-name: fadeInRight; }
+  .m-scene .scene_element--fadeinleft {
+    animation-name: fadeInLeft; }
+  .m-scene.is-exiting .scene_element {
+    animation-direction: alternate-reverse; }
+
+/* Reponsiveness */
+* {
+  box-sizing: border-box; }
+
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  /*border: 1px solid red;*/ }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%; }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-m-1 {
+    width: 8.33%; }
+
+  .col-m-2 {
+    width: 16.66%; }
+
+  .col-m-3 {
+    width: 25%; }
+
+  .col-m-4 {
+    width: 33.33%; }
+
+  .col-m-5 {
+    width: 41.66%; }
+
+  .col-m-6 {
+    width: 50%; }
+
+  .col-m-7 {
+    width: 58.33%; }
+
+  .col-m-8 {
+    width: 66.66%; }
+
+  .col-m-9 {
+    width: 75%; }
+
+  .col-m-10 {
+    width: 83.33%; }
+
+  .col-m-11 {
+    width: 91.66%; }
+
+  .col-m-12 {
+    width: 100%; } }
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%; }
+
+  .col-2 {
+    width: 16.66%; }
+
+  .col-3 {
+    width: 25%; }
+
+  .col-4 {
+    width: 33.33%; }
+
+  .col-5 {
+    width: 41.66%; }
+
+  .col-6 {
+    width: 50%; }
+
+  .col-7 {
+    width: 58.33%; }
+
+  .col-8 {
+    width: 66.66%; }
+
+  .col-9 {
+    width: 75%; }
+
+  .col-10 {
+    width: 83.33%; }
+
+  .col-11 {
+    width: 91.66%; }
+
+  .col-12 {
+    width: 100%; } }
+
+/*# sourceMappingURL=main.css.map */
